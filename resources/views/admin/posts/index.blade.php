@@ -2,7 +2,21 @@
 
 @section('content');
 <div class="container">
-<table class="table">
+    <p>
+        @if(session('deleted'))
+            <div class="alert alert-danger">
+                {{ (session('deleted'))}}
+            </div>
+        @endif
+    </p>
+    <p>
+        @if(session('updated'))
+            <div class="alert alert-success">
+                {{ (session('updated'))}}
+            </div>
+        @endif
+    </p>
+    <table class="table">
         <thead>
             <tr>
             <th scope="col">Codice</th>
